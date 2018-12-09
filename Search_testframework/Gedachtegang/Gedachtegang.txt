@@ -1,0 +1,53 @@
+﻿Gedachtegang...
+
+Doel: Een testframework bouwen om de user interface van de Kodision website te testen.
+
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods
+https://github.com/SeleniumHQ/selenium/wiki/Design-Patterns
+
+Benodigdheden:
+-Visual studio C#
+-Selenium webdriver en chromedriver
+-NUnit
+
+//TODO (Voor het bijhouden van (nieuwe) taken)
+Scenario "bedenken" (Wat ga ik testen)
+
+Informatie opzoeken over testframeworks
+    Opdelen van architectuur.
+    
+Selenium leren kennen
+    Simpel selenium webdriver maken.
+    
+Nunit test schrijven.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Search funtionaliteit testen
+In dit project ga ik de search functionaliteit testen.
+Scenario
+- Als gebruiker wil ik de zoekfunctie kunnen gebruiken.
+
+Test cases
+- Valide invoerdata 
+- Geen invoerdata
+- Invalide invoerdata
+
+Valide invoerdata houdt in dat de woorden daadwerkelijk voorkomen op de site en geen spellingsfouten bevatten.
+Invalide invoer zijn woorden die te veel spellingsfouten bevatten of een serie letters, zoals "saasnjfn".
+Ik ga ervan uit dat de gebruiker degelijk iets wilt opzoeken. Ik houd dus geen rekening met dingen zoals sql-injecties en cross-site scripting.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Het project is opgedeeld in twee mappen: Framework en Tests.
+Framework bevat alle onderdelen van het testframework en Tests bevat de NUnit tests.
+
+Het framework is opgebouwd volgens de Page Object Model pattern, zoals aangeraden in Selenium wiki (https://github.com/SeleniumHQ/selenium/wiki/Design-Patterns).
+
+Framework
+In het Framework map zitten momenteel twee klassen: KodisionMainPage en TopNavigation.
+KodisionMainPage is momenteel leeg, maar het kan bijvoorbeeld methodes bevatten voor openen van links.
+TopNavigation class is de navigatiebar bovenaan de site. De class zal de search functie bevatten. 
+
+Tests
+In deze map zal NUnit testsen bevatten die gebruik maken van het framework.
