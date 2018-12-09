@@ -29,9 +29,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Gedachtegang\ExampleWebdriver.cs" />
-    <Compile Include="Tests\NUnitTestClass.cs" />
     <Compile Include="Framework\KodisionMainPage.cs" />
     <Compile Include="Framework\TopNavigation.cs" />
+    <Compile Include="Tests\NUnitTestClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="WebDriver">

@@ -19,12 +19,20 @@ namespace Search_testframework.Tests
         }
 
         [Test()]
+        public void TestCaseSearchEmptyInput()
+        {
+            nav.Search("");
+            Assert.IsTrue(nav.IsEmpty(), "Results found");
+        }
+
+        [Test()]
         public void TestCaseSearchIsNotEmpty()
         {
             nav.Search("kodision");
             Assert.IsFalse(nav.IsEmpty(), "No results found");
         }
 
+        [Test()]
         public void TestCaseSearchIsEmpty()
         {
             nav.Search("afnjsidsanfadksn");
